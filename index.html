@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon"
+    href="https://cdn.glitch.global/8ec61d84-f524-405b-85fd-2f601dbe9197/706835E4-7F99-4179-BF0A-2BF98E00A9C5.png?v=1654703270026"
+    type="image/x-icon" />
+  <title>Chinese Tool</title>
+  <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+
+  <!-- Traditional character support -->
+  <script type="text/javascript" charset="utf-8" src="https://cdn.jsdelivr.net/gh/hermanschaaf/chinese-ime/trad_chars.js"></script>
+  <!-- IME text at the caret position -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hermanschaaf/chinese-ime/caret.js"></script>
+  <!-- The actual script -->
+  <!-- <script type="text/javascript" src="https://static.staticsave.com/srcvg/chime-js.js"></script> -->
+  <script type="text/javascript" src="./src/assets/chime.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Kaifuny/pinyin4js/dist/pinyin4js.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/kevb34ns/pinyinify/pinyinify.js"></script>
+<script>
+    function copyT(event) {
+        event.stopPropagation();
+        var textarea = document.getElementById('textarea1');
+        // Select the text
+        textarea.select();
+        textarea.setSelectionRange(0, 99999); // For mobile devices
+        try {
+            var successful = document.execCommand('copy');
+            const errorMessage = document.getElementById('error-message');
+            const previousMessage = document.getElementById('success-message').innerHTML;
+            const previousDisplay = document.getElementById('success-message').style.display;
+            const successMessage = document.getElementById('success-message');
+            if (successful) {
+                console.log('Text copied to clipboard');
+                errorMessage.style.display = 'none';
+                successMessage.innerHTML = `Text copied to clipboard`;
+                successMessage.style.display = 'block';
+                setTimeout(function () {
+                    console.log(previousMessage);
+                    successMessage.innerHTML = previousMessage;
+                    successMessage.style.display = previousDisplay;
+                }, 2000);
+            } else {
+                console.log('Failed to copy text');
+                successMessage.style.display = 'none';
+                errorMessage.innerHTML = `Failed to copy text`;
+                errorMessage.style.display = 'block';
+                setTimeout(function () {
+                    errorMessage.innerHTML = '';
+                    errorMessage.style.display = 'none';
+                }, 2000);
+            }
+        } catch (err) {
+            console.error('Failed to copy text: ', err);
+        }
+    }
+  </script>
+</body>
+</html>
