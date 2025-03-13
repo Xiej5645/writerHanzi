@@ -18,7 +18,9 @@ Visit [https://tiny.cc/chwrite](https://tiny.cc/chwrite)
 <details open><summary>Getting started</summary>
 
 > To use `npm` you have to download and install Node.js from [Node.js official website](https://nodejs.org/) if you don't already have it installed.
->Video demo: []()
+>Direct link, choose your custom version and OS: [https://nodejs.org/en/download](https://nodejs.org/en/download)
+>Video demo for Windows: [https://www.youtube.com/watch?v=kQabFyl9r9I](https://www.youtube.com/watch?v=kQabFyl9r9I)
+>Extra resource: [https://www.geeksforgeeks.org/install-node-js-on-windows/](https://www.geeksforgeeks.org/install-node-js-on-windows/)
 
 1. Clone the repository to local machine
     ```bash
