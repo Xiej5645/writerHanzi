@@ -75,3 +75,9 @@ Have fun.
 - [https://github.com/Kaifuny/pinyin4js](https://github.com/Kaifuny/pinyin4js) (MIT License)
 - [https://github.com/hermanschaaf/chinese-ime](https://github.com/hermanschaaf/chinese-ime) (GNU Lesser General Public License v3.0)
 - [https://codepen.io/erikterwan/pen/EVzeRP](https://codepen.io/erikterwan/pen/EVzeRP) (MIT License) Inspired menu icon
+
+
+## Addtional Updates
+- 2025-01-15
+  - added addtional option of url param 't' for querying raw Chinese character Terms.  
+  ie: ?t=我

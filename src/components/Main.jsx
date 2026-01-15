@@ -390,6 +390,7 @@ export default function Main() {
         const params = new URLSearchParams(window.location.search);
         const encodedStateN = params.get('new');
         const encodedStateJ = params.get('short');
+        const encodedStateT = params.get('t');
         if (encodedStateN) {
             // console.log("stateN checked:", encodedStateN);
             return decodeState(encodedStateN);
@@ -402,6 +403,26 @@ export default function Main() {
             console.log("decodedj", state);
             restoreState(state);
         }
+        if (encodedStateT){
+            console.log(200, `${getCurrentESTDate()}\n Loading terms`);
+            const chara = document.getElementById('chara');
+            chara.value = encodedStateT;
+            const mockEvent = {
+                preventDefault: () => {},
+                target: {
+                    elements: {
+                        namedItem: (name) => {
+                            if (name === 'chara') {
+                                return { value: encodedStateT };
+                            }
+                            return null;
+                        }
+                    }
+                }
+            };
+            handleSubmit(mockEvent);
+            return true;
+        }
         return false;
     }
 
@@ -409,7 +430,9 @@ export default function Main() {
     function restoreState(state) {
 
         if (state.length > 0) {
+            console.log("restoring state:", state);
             const input = document.getElementById(state[0].id);
+            console.log(input);
             if (input) {
                 input.value = state[0].content;
             }

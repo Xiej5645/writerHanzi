@@ -20,7 +20,7 @@ export default function Form(props) {
                 defaultValue="凤" 
                 onChange={props.getUrlUpdated()}
             required />
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 rounded " type="submit">Submit</button>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 rounded " type="submit" id="chara-button">Submit</button>
         </form>
     )
 }
