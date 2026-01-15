@@ -77,7 +77,7 @@ Have fun.
 - [https://codepen.io/erikterwan/pen/EVzeRP](https://codepen.io/erikterwan/pen/EVzeRP) (MIT License) Inspired menu icon
 
 
-## Addtional Updates
+## Additional Updates
 - 2025-01-15
-  - added addtional option of url param 't' for querying raw Chinese character Terms.  
-  ie: ?t=我
+  - added additional option of url param 't' for querying raw Chinese character Terms.  
+  for example: ?t=我
