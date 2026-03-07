@@ -4,7 +4,7 @@ export default function FeatureBox({ isUnlimited, handleToggleChange, loadIME, u
         'https://www.archchinese.com/chinese_english_dictionary.html?find=',
         'https://mandarinspot.com/dict?phs=pinyin&sort=rel&word=',
         'https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=1&wdqb=',
-        'https://dict.revised.moe.edu.tw/search.jsp?word='
+        'https://dict.revised.moe.edu.tw/search.jsp?word=',
         'https://dict.concised.moe.edu.tw/search.jsp?word='
     ]
     function handleClickDictBtn(){
