@@ -5,6 +5,7 @@ export default function FeatureBox({ isUnlimited, handleToggleChange, loadIME, u
         'https://mandarinspot.com/dict?phs=pinyin&sort=rel&word=',
         'https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=1&wdqb=',
         'https://dict.revised.moe.edu.tw/search.jsp?word='
+        'https://dict.concised.moe.edu.tw/search.jsp?word='
     ]
     function handleClickDictBtn(){
         const defineC = document.getElementById("defineC");
@@ -46,6 +47,7 @@ export default function FeatureBox({ isUnlimited, handleToggleChange, loadIME, u
                                 <option value="2">MandrnSpot</option>
                                 <option value="3">MDGB</option>
                                 <option value="4">TW MOE Dict</option>
+                                <option value="5">TW MOE Dict concised</option>
                             </select> <span className="pr-[5px]" onClick={handleClickDictBtn}>for current character: {userC}, {PinyinHelper.convertToPinyinString(userC, '', PinyinFormat.WITH_TONE_MARK)}</span>
                         {/* onClick={() => { window.open(`https://www.twpen.com/${userC}.html`, '_blank') }} */}
                         </div>

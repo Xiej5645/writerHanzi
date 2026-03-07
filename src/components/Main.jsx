@@ -57,7 +57,7 @@ export default function Main() {
                 height: 300,
                 padding: 5,
                 drawingWidth: 30,
-                strokeColor: "#000",
+                strokeColor: "rgb(77, 163, 255)",
                 radicalColor: "rgb(0,0,255)",
                 showOutline: true,
                 strokeAnimationSpeed: 1, // 3x normal speed
@@ -81,7 +81,7 @@ export default function Main() {
                 height: 300,
                 padding: 5,
                 drawingWidth: 30,
-                strokeColor: "#000",
+                strokeColor: "rgb(77, 163, 255)",
                 radicalColor: "rgb(0,0,255)",
                 showOutline: true,
                 strokeAnimationSpeed: 1, // 3x normal speed
